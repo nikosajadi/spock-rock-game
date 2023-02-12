@@ -25,7 +25,9 @@ body {
 
 .header {
   background: dodgerblue;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 100px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,14 +45,24 @@ h1 {
 h2 {
   margin-bottom: 20px;
 }
-
+/* this is class fot all Icon */
 .far {
   font-size: 50px;
   margin-right: 40px;
   User-select: none;
 }
+/* player is ID */
+#player .far,
+#player .choice {
+  color: dodgerblue;
+  cursor: pointer;
+}
 
-
+#computer .far,
+#computer .choice {
+  color: rgb(223, 42, 42);
+  
+}
 
 .reset-icon {
   font-size: 30px;
@@ -73,7 +85,7 @@ h2 {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .game-container {
-
+    width: 95%;
     height: 580px;
   }
 

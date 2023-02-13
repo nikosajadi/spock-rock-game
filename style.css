@@ -60,8 +60,18 @@ h2 {
 
 #computer .far,
 #computer .choice {
-  color: rgb(223, 42, 42);
+  color: rgb(223, 42, 52);
   
+}
+/* this is going to target the last Far, our icon that is a child of the player ID*/
+#player .far:last-of-type,
+#computer .far:last-of-type {
+  margin: 0;
+}
+
+.selected {
+  /* I going to have selected class is overriding the ID color that we had added previously so I use from (!important) */
+ color: black !important;
 }
 
 .reset-icon {

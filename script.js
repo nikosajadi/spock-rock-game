@@ -18,7 +18,10 @@ const computerSpock = document.getElementById('computerSpock');
 // All of this element that have in this class (far)
 const allGameIcons = document.querySelectorAll('.far');
 
-
+//passing player selection value and styling icons
+function select (playerChoice) {
+  console.log(playerChoice);
+}
 
 
 const choices = {

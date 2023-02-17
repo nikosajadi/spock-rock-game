@@ -41,7 +41,7 @@ function resetSelected () {
 
  // passing player selection value and styling icons
 function select(playerChoice) {
-  
+  resetSelected()
   switch (playerChoice) {
     case 'rock':
       playerRock.classList.add('selected');

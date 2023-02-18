@@ -39,9 +39,14 @@ function resetSelected () {
 }
 
 
+//call function to process turn inorder to creat logic for the moputer to make a random selection
+function checkResult () {
+  resetSelected();
+}
+
  // passing player selection value and styling icons
 function select(playerChoice) {
-  resetSelected()
+  checkResult()
   switch (playerChoice) {
     case 'rock':
       playerRock.classList.add('selected');

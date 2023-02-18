@@ -31,7 +31,7 @@ const choices = {
 
 console.log(allGameIcons);
 
-// Reset all 'selected' icons
+//Reset all 'selected' icons
 function resetSelected () {
   allGameIconservative.forEach((icon) => {
     icon.classList.remove('selected')
@@ -43,37 +43,39 @@ let comuterChoice = '';
 //Random compiuter choice
 function randomComuterChoice(){
   const computerChoiceNumber = Math.random();
+  console.log(computerChoiceNumber);
 }
 //call function to process turn inorder to creat logic for the moputer to make a random selection
 function checkResult () {
   //I want to make seperate function for each thing , it is easier to troubleshoot
-  resetSelected();
-  computerChoiceNumber()
+  //resetSelected();
+  computerRandomChoice();
 }
 
  // passing player selection value and styling icons
-function select(playerChoice) {
-  checkResult()
-  switch (playerChoice) {
+
+// Add 'selected' styling & computerChoice
+function displayComputerChoice() {
+  switch (computerChoice) {
     case 'rock':
-      playerRock.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Rock';
+      computerRock.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Rock';
       break;
     case 'paper':
-      playerPaper.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Paper';
+      computerPaper.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Paper';
       break;
     case 'scissors':
-      playerScissors.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Scissors';
+      computerScissors.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Scissors';
       break;
     case 'lizard':
-      playerLizard.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Lizard';
+      computerLizard.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Lizard';
       break;
     case 'spock':
-      playerSpock.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Spock';
+      computerSpock.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Spock';
       break;
     default:
       break;

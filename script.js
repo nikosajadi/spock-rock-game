@@ -38,10 +38,17 @@ function resetSelected () {
   }); 
 }
 
+let comuterChoice = '';
 
+//Random compiuter choice
+function randomComuterChoice(){
+  const computerChoiceNumber = Math.random();
+}
 //call function to process turn inorder to creat logic for the moputer to make a random selection
 function checkResult () {
+  //I want to make seperate function for each thing , it is easier to troubleshoot
   resetSelected();
+  computerChoiceNumber()
 }
 
  // passing player selection value and styling icons

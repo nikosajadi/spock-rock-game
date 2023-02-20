@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Comfortaa&family=Kaushan+Script&family=League+Spartan:wght@400;700&family=Oswald&family=Roboto&family=Sen&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 html {
   box-sizing: border-box;
@@ -17,17 +18,16 @@ body {
 .game-container {
   width: 530px;
   height: 600px;
-  background: rgb(206, 219, 232);
-  border-radius: 5px;
-   /* horizontal offset - vertical offset - blurred (how much the color ) -  */
+  background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 .header {
   background: dodgerblue;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  height: 100px; 
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,13 +45,12 @@ h1 {
 h2 {
   margin-bottom: 20px;
 }
-/* this is class fot all Icon */
+
 .far {
   font-size: 50px;
   margin-right: 40px;
-  User-select: none;
 }
-/* player is ID */
+
 #player .far,
 #player .choice {
   color: dodgerblue;
@@ -60,18 +59,16 @@ h2 {
 
 #computer .far,
 #computer .choice {
-  color: rgb(223, 42, 52);
-  
+  color: rgb(235, 43, 52);
 }
-/* this is going to target the last Far, our icon that is a child of the player ID*/
+
 #player .far:last-of-type,
 #computer .far:last-of-type {
-  margin: 0;
+  margin-right: 0;
 }
 
 .selected {
-  /* I going to have selected class is overriding the ID color that we had added previously so I use from (!important) */
- color: black !important;
+  color: black !important;
 }
 
 .reset-icon {

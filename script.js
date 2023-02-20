@@ -1,3 +1,5 @@
+import { startConfetti, stopConfetti, removeConfetti } from './confetti.js';
+
 const playerScoreEl = document.getElementById('playerScore');
 const playerChoiceEl = document.getElementById('playerChoice');
 const computerScoreEl = document.getElementById('computerScore');
@@ -31,20 +33,35 @@ const choices = {
 
 console.log(allGameIcons);
 
-//Reset all 'selected' icons
-function resetSelected () {
-  allGameIconservative.forEach((icon) => {
-    icon.classList.remove('selected')
+let computerChoice = '';
+
+// Reset all 'selected' icons, remove confetti
+function resetSelected() {
+  allGameIcons.forEach((icon) => {
+    icon.classList.remove('selected');
   }); 
 }
 
-let comuterChoice = '';
 
-//Random compiuter choice
-function randomComuterChoice(){
+
+// Random computer choice
+function computerRandomChoice() {
   const computerChoiceNumber = Math.random();
-  console.log(computerChoiceNumber);
+  if (computerChoiceNumber < 0.2) {
+    computerChoice = 'rock';
+  } else if (computerChoiceNumber <= 0.4) {
+    computerChoice = 'paper';
+  } else if (computerChoiceNumber <= 0.6) {
+    computerChoice = 'scissors';
+  } else if (computerChoiceNumber <= 0.8) {
+    computerChoice = 'lizard';
+  } else {
+    computerChoice = 'spock';
+  }
 }
+
+
+
 //call function to process turn inorder to creat logic for the moputer to make a random selection
 function checkResult () {
   //I want to make seperate function for each thing , it is easier to troubleshoot

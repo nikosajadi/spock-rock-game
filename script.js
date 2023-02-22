@@ -30,7 +30,7 @@ const choices = {
 
 console.log(allGameIcons);
 
-// let computerChoice = '';
+let computerChoice = '';
 
 // Reset all 'selected' icons, remove confetti
 function resetSelected() {
@@ -39,55 +39,56 @@ function resetSelected() {
   });
 }
 
-// // Random computer choice
-// function computerRandomChoice() {
-//   const computerChoiceNumber = Math.random();
-//   if (computerChoiceNumber < 0.2) {
-//     computerChoice = 'rock';
-//   } else if (computerChoiceNumber <= 0.4) {
-//     computerChoice = 'paper';
-//   } else if (computerChoiceNumber <= 0.6) {
-//     computerChoice = 'scissors';
-//   } else if (computerChoiceNumber <= 0.8) {
-//     computerChoice = 'lizard';
-//   } else {
-//     computerChoice = 'spock';
-//   }
-// }
+// Random computer choice
+function computerRandomChoice() {
+  const computerChoiceNumber = Math.random();
+  if (computerChoiceNumber < 0.2) {
+    computerChoice = 'rock';
+  } else if (computerChoiceNumber <= 0.4) {
+    computerChoice = 'paper';
+  } else if (computerChoiceNumber <= 0.6) {
+    computerChoice = 'scissors';
+  } else if (computerChoiceNumber <= 0.8) {
+    computerChoice = 'lizard';
+  } else {
+    computerChoice = 'spock';
+  }
+}
 
-// //call function to process turn inorder to creat logic for the moputer to make a random selection
-// function checkResult () {
-//   //I want to make seperate function for each thing , it is easier to troubleshoot
-//   //resetSelected();
-//   computerRandomChoice();
-// }
+//call function to process turn inorder to creat logic for the moputer to make a random selection
+function checkResult () {
+  //I want to make seperate function for each thing , it is easier to troubleshoot
+  resetSelected();
+  computerRandomChoice();
+}
 
-// passing player selection value and styling icons
+// Passing player selection value and styling icons
 function select(playerChoice) {
-  // Add 'selected' styling & computerChoice
-  // function displayComputerChoice() {
+  checkResult(playerChoice);
+  // Add 'selected' styling & playerChoice
   switch (playerChoice) {
-    case "rock":
-      computerRock.classList.add("selected");
-      computerChoiceEl.textContent = " --- Rock";
+    case 'rock':
+      playerRock.classList.add('selected');
+      playerChoiceEl.textContent = ' --- Rock';
       break;
-    case "paper":
-      computerPaper.classList.add("selected");
-      computerChoiceEl.textContent = " --- Paper";
+    case 'paper':
+      playerPaper.classList.add('selected');
+      playerChoiceEl.textContent = ' --- Paper';
       break;
-    case "scissors":
-      computerScissors.classList.add("selected");
-      computerChoiceEl.textContent = " --- Scissors";
+    case 'scissors':
+      playerScissors.classList.add('selected');
+      playerChoiceEl.textContent = ' --- Scissors';
       break;
-    case "lizard":
-      computerLizard.classList.add("selected");
-      computerChoiceEl.textContent = " --- Lizard";
+    case 'lizard':
+      playerLizard.classList.add('selected');
+      playerChoiceEl.textContent = ' --- Lizard';
       break;
-    case "spock":
-      computerSpock.classList.add("selected");
-      computerChoiceEl.textContent = " --- Spock";
+    case 'spock':
+      playerSpock.classList.add('selected');
+      playerChoiceEl.textContent = ' --- Spock';
       break;
     default:
       break;
   }
 }
+

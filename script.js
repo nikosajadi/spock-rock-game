@@ -53,14 +53,48 @@ function computerRandomChoice() {
   } else {
     computerChoice = 'spock';
   }
+   //console.log(computerChoice);
 }
+
+// Add 'selected' styling & compiuterChoice
+function displayComputerChoice() {
+ switch (computerChoice) {
+    case 'rock':
+      computerRock.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Rock';
+      break;
+    case 'paper':
+      computerPaper.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Paper';
+      break;
+    case 'scissors':
+      computerScissors.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Scissors';
+      break;
+    case 'lizard':
+      computerLizard.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Lizard';
+      break;
+    case 'spock':
+      computerSpock.classList.add('selected');
+      computerChoiceEl.textContent = ' --- Spock';
+      break;
+    default:
+      break;
+  }
+}
+
+
+
 
 //call function to process turn inorder to creat logic for the moputer to make a random selection
 function checkResult () {
   //I want to make seperate function for each thing , it is easier to troubleshoot
   resetSelected();
   computerRandomChoice();
+  displayComputerChoice();
 }
+
 
 // Passing player selection value and styling icons
 function select(playerChoice) {

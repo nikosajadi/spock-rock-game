@@ -28,7 +28,10 @@ const choices = {
   spock: { name: "Spock", defeats: ["scissors", "rock"] },
 };
 
-console.log(allGameIcons);
+//console.log(allGameIcons);
+
+let playerScoreNumber = 0;
+let compiuterScoreNumber= 0;
 
 let computerChoice = '';
 
@@ -84,15 +87,19 @@ function displayComputerChoice() {
   }
 }
 
-
+//check result, increase scores, update resultText
+function updateScore(playerChoice){
+console.log(playerChoice,computerChoice);
+}
 
 
 //call function to process turn inorder to creat logic for the moputer to make a random selection
-function checkResult () {
+function checkResult (playerChoice) {
   //I want to make seperate function for each thing , it is easier to troubleshoot
   resetSelected();
   computerRandomChoice();
   displayComputerChoice();
+  updateScore(playerChoice);
 }
 
 
